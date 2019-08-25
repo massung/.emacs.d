@@ -15,6 +15,3 @@ git clone https://github.com/jrblevin/markdown-mode
 # get color themese
 git clone https://github.com/dracula/emacs dracula-theme
 git clone https://github.com/jonathanchu/atom-one-dark-theme
-
-# copy the .emacs file to HOME
-cp .emacs $HOME/.emacs
