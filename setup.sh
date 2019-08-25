@@ -10,6 +10,7 @@ git clone https://github.com/auto-complete/popup-el
 git clone https://github.com/magnars/s.el
 git clone https://github.com/slime/slime
 git clone https://github.com/anwyn/slime-company
+git clone https://github.com/jrblevin/markdown-mode
 
 # get color themese
 git clone https://github.com/dracula/emacs dracula-theme
