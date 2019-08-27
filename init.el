@@ -179,3 +179,7 @@
 ;; if statements in lisp should be indented like elisp
 (add-hook 'lisp-mode-hook 'setup-lisp-indentation)
 (add-hook 'lisp-interaction-mode-hook 'setup-lisp-indentation)
+
+;; let C-\ insert a lambda character
+(global-set-key (kbd "C-\\") "λ")
+
