@@ -10,8 +10,6 @@
 (add-to-list 'load-path "~/.emacs.d/flycheck")
 (add-to-list 'load-path "~/.emacs.d/slime")
 (add-to-list 'load-path "~/.emacs.d/slime-company")
-(add-to-list 'load-path "~/.emacs.d/racket-mode")
-(add-to-list 'load-path "~/.emacs.d/geiser/elisp")
 
 ;; add theme paths
 (add-to-list 'custom-theme-load-path "~/.emacs.d/atom-one-dark-theme/")
@@ -30,8 +28,6 @@
 (require 'slime)
 (require 'slime-fuzzy)
 (require 'slime-company)
-(require 'racket-mode)
-(require 'geiser)
 
 ;; load packages based on version
 (when (and (>= emacs-major-version 24)
@@ -179,7 +175,3 @@
 ;; if statements in lisp should be indented like elisp
 (add-hook 'lisp-mode-hook 'setup-lisp-indentation)
 (add-hook 'lisp-interaction-mode-hook 'setup-lisp-indentation)
-
-;; let C-\ insert a lambda character
-(global-set-key (kbd "C-\\") "λ")
-
