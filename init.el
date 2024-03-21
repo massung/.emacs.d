@@ -1,9 +1,11 @@
 (add-to-list 'load-path "~/.emacs.d/p/emacs-git-gutter")
+(add-to-list 'load-path "~/.emacs.d/p/markdown-mode")
 (add-to-list 'load-path "~/.emacs.d/p/powerline")
 (add-to-list 'load-path "~/.emacs.d/p/slime")
 (add-to-list 'load-path "~/.emacs.d/p/timu-rouge-theme")
 
 (require 'git-gutter)
+(require 'markdown-mode)
 (require 'powerline)
 (require 'slime-autoloads)
 (require 'timu-rouge-theme)
@@ -36,8 +38,8 @@
 (setq inhibit-startup-screen t)
 
 ;; disable autosave and creation of backup files
-(setq auto-save-list-file-prefix nil)
 (setq auto-save-default nil)
+(setq auto-save-list-file-prefix nil)
 (setq backup-inhibited t)
 
 ;; use spaces for everything

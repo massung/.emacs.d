@@ -3,6 +3,7 @@ set -e
 
 PACKAGES=(
     "https://github.com/syohex/emacs-git-gutter"
+    "https://github.com/jrblevin/markdown-mode"
     "https://github.com/milkypostman/powerline"
     "https://github.com/slime/slime"
     "https://gitlab.com/aimebertrand/timu-rouge-theme"
@@ -17,7 +18,7 @@ for PKG in "${PACKAGES[@]}"; do
     dir="p/$name"
 
     if [ ! -d "$dir" ]; then
-	echo "Cloning $name..."
-	git clone -q "$PKG" "$dir"
+  echo "Cloning $name..."
+  git clone -q "$PKG" "$dir"
     fi
 done
