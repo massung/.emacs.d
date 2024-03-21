@@ -36,6 +36,7 @@
 (setq inhibit-startup-screen t)
 
 ;; disable autosave and creation of backup files
+(setq auto-save-list-file-prefix nil)
 (setq auto-save-default nil)
 (setq backup-inhibited t)
 
