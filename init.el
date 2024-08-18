@@ -2,17 +2,30 @@
 (add-to-list 'load-path "~/.emacs.d/p/markdown-mode")
 (add-to-list 'load-path "~/.emacs.d/p/powerline")
 (add-to-list 'load-path "~/.emacs.d/p/slime")
+(add-to-list 'load-path "~/.emacs.d/p/janet-mode")
+(add-to-list 'load-path "~/.emacs.d/p/ijanet-mode")
 (add-to-list 'load-path "~/.emacs.d/p/timu-rouge-theme")
+(add-to-list 'load-path "~/.emacs.d/p/exec-path-from-shell")
 
 (require 'git-gutter)
 (require 'markdown-mode)
 (require 'powerline)
 (require 'slime-autoloads)
+(require 'janet-mode)
+(require 'ijanet)
 (require 'timu-rouge-theme)
+(require 'exec-path-from-shell)
 
 ;; theme
 (powerline-default-theme)
 (load-theme 'timu-rouge t)
+
+;; specify environment variables to keep
+(dolist (var '("DYLD_LIBRARY_PATH"))
+  (add-to-list 'exec-path-from-shell-variables var))
+
+;; load environment variables
+(exec-path-from-shell-initialize)
 
 ;; git gutter
 (global-git-gutter-mode +1)
@@ -29,7 +42,9 @@
 (set-face-background 'git-gutter:deleted "red")
 
 ;; setup slime
-(setq inferior-lisp-program "sbcl")
+;(setq inferior-lisp-program "sbcl")
+(setq inferior-lisp-program
+      "/Applications/AllegroCL64express.app/Contents/Resources/alisp")
 
 ;; use command key as meta
 (setq mac-command-modifier 'meta)

@@ -6,7 +6,10 @@ PACKAGES=(
     "https://github.com/jrblevin/markdown-mode"
     "https://github.com/milkypostman/powerline"
     "https://github.com/slime/slime"
+    "https://github.com/ALSchwalm/janet-mode"
+    "https://github.com/SerialDev/ijanet-mode"
     "https://gitlab.com/aimebertrand/timu-rouge-theme"
+    "https://github.com/purcell/exec-path-from-shell"
 )
 
 # create the packages subdirectory if needed
@@ -18,7 +21,7 @@ for PKG in "${PACKAGES[@]}"; do
     dir="p/$name"
 
     if [ ! -d "$dir" ]; then
-  echo "Cloning $name..."
-  git clone -q "$PKG" "$dir"
+        echo "Cloning $name..."
+        git clone -q "$PKG" "$dir"
     fi
 done
