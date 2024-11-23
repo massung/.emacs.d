@@ -2,9 +2,14 @@
 set -e
 
 PACKAGES=(
+    "https://github.com/magnars/dash.el"
+    "https://github.com/rejeep/f.el"
+    "https://github.com/magnars/s.el"
     "https://github.com/syohex/emacs-git-gutter"
     "https://github.com/jrblevin/markdown-mode"
     "https://github.com/milkypostman/powerline"
+    "https://github.com/flycheck/flycheck"
+    "https://github.com/company-mode/company-mode"
     "https://github.com/slime/slime"
     "https://github.com/ALSchwalm/janet-mode"
     "https://github.com/SerialDev/ijanet-mode"
