@@ -8,7 +8,7 @@
 (add-to-list 'load-path "~/.emacs.d/p/company-mode")
 (add-to-list 'load-path "~/.emacs.d/p/slime")
 (add-to-list 'load-path "~/.emacs.d/p/janet-mode")
-(add-to-list 'load-path "~/.emacs.d/p/ijanet-mode")
+(add-to-list 'load-path "~/.emacs.d/p/ajrepl")
 (add-to-list 'load-path "~/.emacs.d/p/timu-rouge-theme")
 (add-to-list 'load-path "~/.emacs.d/p/exec-path-from-shell")
 
@@ -22,7 +22,7 @@
 (require 'company)
 (require 'slime-autoloads)
 (require 'janet-mode)
-(require 'ijanet)
+(require 'ajrepl)
 (require 'timu-rouge-theme)
 (require 'exec-path-from-shell)
 
@@ -52,9 +52,8 @@
 (set-face-background 'git-gutter:deleted "red")
 
 ;; setup slime
-;(setq inferior-lisp-program "sbcl")
-(setq inferior-lisp-program
-      "/Applications/AllegroCL64express.app/Contents/Resources/alisp")
+(setq inferior-lisp-program "sbcl")
+;(setq inferior-lisp-program "/Applications/AllegroCL64express.app/Contents/Resources/alisp")
 
 ;; use command key as meta
 (setq mac-command-modifier 'meta)
@@ -82,7 +81,7 @@
 (setq whitespace-line-column 72)
 
 ;; font
-(set-frame-font "PT Mono 14" nil t)
+(set-frame-font "Atkinson Hyperlegible Mono" nil t)
 
 ;; random options
 (display-line-numbers-mode t)
@@ -108,3 +107,6 @@
 
 (add-hook 'lisp-mode-hook 'setup-lisp-indentation)
 (add-hook 'lisp-interaction-mode-hook 'setup-lisp-indentation)
+
+;; janet interactive repl
+(add-hook 'janet-mode-hook #'ajrepl-interaction-mode)

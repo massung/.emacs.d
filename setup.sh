@@ -12,7 +12,7 @@ PACKAGES=(
     "https://github.com/company-mode/company-mode"
     "https://github.com/slime/slime"
     "https://github.com/ALSchwalm/janet-mode"
-    "https://github.com/SerialDev/ijanet-mode"
+    "https://github.com/sogaiu/ajrepl"
     "https://gitlab.com/aimebertrand/timu-rouge-theme"
     "https://github.com/purcell/exec-path-from-shell"
 )
